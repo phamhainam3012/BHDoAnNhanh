@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLQCOFE3ModelStoreContainer" CdmEntityContainer="QLQCOFE3Entities">
+    <EntitySetMapping Name="BANs">
+      <EntityTypeMapping TypeName="QLQCOFE3Model.BAN">
+        <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="IDBAN" ColumnName="IDBAN" />
+          <ScalarProperty Name="TENBAN" ColumnName="TENBAN" />
+          <ScalarProperty Name="TRANGTHAIBAN" ColumnName="TRANGTHAIBAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DANHMUCs">
+      <EntityTypeMapping TypeName="QLQCOFE3Model.DANHMUC">
+        <MappingFragment StoreEntitySet="DANHMUC">
+          <ScalarProperty Name="IDDANHMUC" ColumnName="IDDANHMUC" />
+          <ScalarProperty Name="TENDANHMUC" ColumnName="TENDANHMUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="QLQCOFE3Model.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="IDHOADON" ColumnName="IDHOADON" />
+          <ScalarProperty Name="IDBAN" ColumnName="IDBAN" />
+          <ScalarProperty Name="THOIGIANTOI" ColumnName="THOIGIANTOI" />
+          <ScalarProperty Name="THOIGIANDI" ColumnName="THOIGIANDI" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONANs">
+      <EntityTypeMapping TypeName="QLQCOFE3Model.MONAN">
+        <MappingFragment StoreEntitySet="MONAN">
+          <ScalarProperty Name="IDMON" ColumnName="IDMON" />
+          <ScalarProperty Name="TENMON" ColumnName="TENMON" />
+          <ScalarProperty Name="GIATIEN" ColumnName="GIATIEN" />
+          <ScalarProperty Name="ANH" ColumnName="ANH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLQCOFE3Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteBAN" FunctionName="QLQCOFE3Model.Store.DeleteBAN" />
+    <FunctionImportMapping FunctionImportName="DeleteDANHMUC" FunctionName="QLQCOFE3Model.Store.DeleteDANHMUC" />
+    <FunctionImportMapping FunctionImportName="DeleteHOADON" FunctionName="QLQCOFE3Model.Store.DeleteHOADON" />
+    <FunctionImportMapping FunctionImportName="DeleteMONAN" FunctionName="QLQCOFE3Model.Store.DeleteMONAN" />
+    <FunctionImportMapping FunctionImportName="GetBAN" FunctionName="QLQCOFE3Model.Store.GetBAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.GetBAN_Result">
+          <ScalarProperty Name="Mã_Bàn" ColumnName="Mã Bàn" />
+          <ScalarProperty Name="Tên_Bàn" ColumnName="Tên Bàn" />
+          <ScalarProperty Name="Trạng_Thái_Bàn" ColumnName="Trạng Thái Bàn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDANHMUC" FunctionName="QLQCOFE3Model.Store.GetDANHMUC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.GetDANHMUC_Result">
+          <ScalarProperty Name="Mã_Danh_Mục" ColumnName="Mã Danh Mục" />
+          <ScalarProperty Name="Tên_Danh_Mục" ColumnName="Tên Danh Mục" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetHOADON" FunctionName="QLQCOFE3Model.Store.GetHOADON">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.GetHOADON_Result">
+          <ScalarProperty Name="Mã_Hóa_Đơn" ColumnName="Mã Hóa Đơn" />
+          <ScalarProperty Name="Mã_BÀN" ColumnName="Mã BÀN" />
+          <ScalarProperty Name="Thời_Gian_Tới" ColumnName="Thời Gian Tới" />
+          <ScalarProperty Name="Thời_Gian_Đi" ColumnName="Thời Gian Đi" />
+          <ScalarProperty Name="Trạng_Thái" ColumnName="Trạng Thái" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMONAN" FunctionName="QLQCOFE3Model.Store.GetMONAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.GetMONAN_Result">
+          <ScalarProperty Name="Mã_Món" ColumnName="Mã Món" />
+          <ScalarProperty Name="Tên_Món" ColumnName="Tên Món" />
+          <ScalarProperty Name="Giá_Tiền" ColumnName="Giá Tiền" />
+          <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InserDANHMUC" FunctionName="QLQCOFE3Model.Store.InserDANHMUC" />
+    <FunctionImportMapping FunctionImportName="InsertBAN" FunctionName="QLQCOFE3Model.Store.InsertBAN" />
+    <FunctionImportMapping FunctionImportName="InsertHOADON" FunctionName="QLQCOFE3Model.Store.InsertHOADON" />
+    <FunctionImportMapping FunctionImportName="InsertMONAN" FunctionName="QLQCOFE3Model.Store.InsertMONAN" />
+    <FunctionImportMapping FunctionImportName="SearchMONAN" FunctionName="QLQCOFE3Model.Store.SearchMONAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.SearchMONAN_Result">
+          <ScalarProperty Name="ID_Món" ColumnName="ID Món" />
+          <ScalarProperty Name="Tên_Món" ColumnName="Tên Món" />
+          <ScalarProperty Name="Giá_Tiền" ColumnName="Giá Tiền" />
+          <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLQCOFE3Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLQCOFE3Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLQCOFE3Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLQCOFE3Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLQCOFE3Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQCOFE3Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLQCOFE3Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLQCOFE3Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UpdateBAN" FunctionName="QLQCOFE3Model.Store.UpdateBAN" />
+    <FunctionImportMapping FunctionImportName="UpdateDANHMUC" FunctionName="QLQCOFE3Model.Store.UpdateDANHMUC" />
+    <FunctionImportMapping FunctionImportName="UpdateHOADON" FunctionName="QLQCOFE3Model.Store.UpdateHOADON" />
+    <FunctionImportMapping FunctionImportName="UpdateMONAN" FunctionName="QLQCOFE3Model.Store.UpdateMONAN" />
+  </EntityContainerMapping>
+</Mapping>

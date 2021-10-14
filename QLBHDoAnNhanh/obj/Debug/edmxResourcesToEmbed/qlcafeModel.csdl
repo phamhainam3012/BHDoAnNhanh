@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLQCOFE3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="IDBAN" />
+    </Key>
+    <Property Name="IDBAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TENBAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRANGTHAIBAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_BAN" FromRole="BAN" ToRole="HOADON" />
+  </EntityType>
+  <EntityType Name="DANHMUC">
+    <Key>
+      <PropertyRef Name="IDDANHMUC" />
+    </Key>
+    <Property Name="IDDANHMUC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TENDANHMUC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="IDHOADON" />
+    </Key>
+    <Property Name="IDHOADON" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDBAN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="THOIGIANTOI" Type="DateTime" Precision="0" />
+    <Property Name="THOIGIANDI" Type="DateTime" Precision="0" />
+    <Property Name="TRANGTHAI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BAN" Relationship="Self.FK_HOADON_BAN" FromRole="HOADON" ToRole="BAN" />
+  </EntityType>
+  <EntityType Name="MONAN">
+    <Key>
+      <PropertyRef Name="IDMON" />
+    </Key>
+    <Property Name="IDMON" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TENMON" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GIATIEN" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_HOADON_BAN">
+    <End Role="BAN" Type="Self.BAN" Multiplicity="1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAN">
+        <PropertyRef Name="IDBAN" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="IDBAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLQCOFE3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BANs" EntityType="Self.BAN" />
+    <EntitySet Name="DANHMUCs" EntityType="Self.DANHMUC" />
+    <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
+    <EntitySet Name="MONANs" EntityType="Self.MONAN" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_HOADON_BAN" Association="Self.FK_HOADON_BAN">
+      <End Role="BAN" EntitySet="BANs" />
+      <End Role="HOADON" EntitySet="HOADONs" />
+    </AssociationSet>
+    <FunctionImport Name="DeleteBAN">
+      <Parameter Name="IDBAN" Mode="In" Type="String" />
+      <Parameter Name="TENBAN" Mode="In" Type="String" />
+      <Parameter Name="TRANGTHAIBAN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteDANHMUC">
+      <Parameter Name="IDDANHMUC" Mode="In" Type="String" />
+      <Parameter Name="TENDANHMUC" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteHOADON">
+      <Parameter Name="IDHOADON" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteMONAN">
+      <Parameter Name="IDMON" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetBAN" ReturnType="Collection(QLQCOFE3Model.GetBAN_Result)" />
+    <FunctionImport Name="GetDANHMUC" ReturnType="Collection(QLQCOFE3Model.GetDANHMUC_Result)" />
+    <FunctionImport Name="GetHOADON" ReturnType="Collection(QLQCOFE3Model.GetHOADON_Result)" />
+    <FunctionImport Name="GetMONAN" ReturnType="Collection(QLQCOFE3Model.GetMONAN_Result)" />
+    <FunctionImport Name="InserDANHMUC">
+      <Parameter Name="IDDANHMUC" Mode="In" Type="String" />
+      <Parameter Name="TENDANHMUC" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBAN">
+      <Parameter Name="IDBAN" Mode="In" Type="String" />
+      <Parameter Name="TENBAN" Mode="In" Type="String" />
+      <Parameter Name="TRANGTHAIBAN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertHOADON">
+      <Parameter Name="IDHOADON" Mode="In" Type="String" />
+      <Parameter Name="IDBAN" Mode="In" Type="String" />
+      <Parameter Name="THOIGIANTOI" Mode="In" Type="DateTime" />
+      <Parameter Name="THOIGIANDI" Mode="In" Type="DateTime" />
+      <Parameter Name="TRANGTHAI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMONAN">
+      <Parameter Name="IDMON" Mode="In" Type="String" />
+      <Parameter Name="TENMON" Mode="In" Type="String" />
+      <Parameter Name="GIATIEN" Mode="In" Type="Decimal" />
+      <Parameter Name="ANH" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SearchMONAN" ReturnType="Collection(QLQCOFE3Model.SearchMONAN_Result)">
+      <Parameter Name="IDMON" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QLQCOFE3Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLQCOFE3Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="UpdateBAN">
+      <Parameter Name="IDBAN" Mode="In" Type="String" />
+      <Parameter Name="TENBAN" Mode="In" Type="String" />
+      <Parameter Name="TRANGTHAIBAN" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateDANHMUC">
+      <Parameter Name="IDDANHMUC" Mode="In" Type="String" />
+      <Parameter Name="TENDANHMUC" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateHOADON">
+      <Parameter Name="IDHOADON" Mode="In" Type="String" />
+      <Parameter Name="IDBAN" Mode="In" Type="String" />
+      <Parameter Name="THOIGIANTOI" Mode="In" Type="DateTime" />
+      <Parameter Name="THOIGIANDI" Mode="In" Type="DateTime" />
+      <Parameter Name="TRANGTHAI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateMONAN">
+      <Parameter Name="IDMON" Mode="In" Type="String" />
+      <Parameter Name="TENMON" Mode="In" Type="String" />
+      <Parameter Name="GIATIEN" Mode="In" Type="Decimal" />
+      <Parameter Name="ANH" Mode="In" Type="Binary" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetBAN_Result">
+    <Property Type="String" Name="Mã_Bàn" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tên_Bàn" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Trạng_Thái_Bàn" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetDANHMUC_Result">
+    <Property Type="String" Name="Mã_Danh_Mục" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tên_Danh_Mục" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetHOADON_Result">
+    <Property Type="String" Name="Mã_Hóa_Đơn" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Mã_BÀN" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="Thời_Gian_Tới" Nullable="true" />
+    <Property Type="DateTime" Name="Thời_Gian_Đi" Nullable="true" />
+    <Property Type="String" Name="Trạng_Thái" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetMONAN_Result">
+    <Property Type="String" Name="Mã_Món" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tên_Món" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Giá_Tiền" Nullable="true" Precision="19" />
+    <Property Type="Binary" Name="Ảnh" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="SearchMONAN_Result">
+    <Property Type="String" Name="ID_Món" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tên_Món" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="Giá_Tiền" Nullable="true" Precision="19" />
+    <Property Type="Binary" Name="Ảnh" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

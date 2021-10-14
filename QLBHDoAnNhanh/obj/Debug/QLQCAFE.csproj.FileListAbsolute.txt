@@ -1,0 +1,78 @@
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\QLQCAFE.exe.config
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\QLQCAFE.exe
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\QLQCAFE.pdb
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.Form1.resources
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.Properties.Resources.resources
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.exe
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.pdb
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.MDIMainfrom.resources
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\TelerikCommon.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.xml
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.exe.licenses
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.csproj.CopyComplete
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.Form3.resources
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\QLQCAFE\QLQCAFE\obj\Debug\QLQCAFE.Form2.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\QLQCAFE.exe.config
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\QLQCAFE.exe
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\QLQCAFE.pdb
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\TelerikCommon.dll
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.xml
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.Form1.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.Form2.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.Form3.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.MDIMainfrom.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.Properties.Resources.resources
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.exe.licenses
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.csproj.CopyComplete
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.exe
+C:\Users\Administrator\source\repos\QLTRACHANH\QLQCAFE\obj\Debug\QLQCAFE.pdb
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\QLQCAFE.exe.config
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\QLQCAFE.exe
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\QLQCAFE.pdb
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\EntityFramework.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\EntityFramework.SqlServer.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.UI.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\TelerikCommon.dll
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\EntityFramework.xml
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\EntityFramework.SqlServer.xml
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.xml
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.GridView.xml
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\bin\Debug\Telerik.WinControls.UI.xml
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.csproj.AssemblyReference.cache
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.Form1.resources
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.Form2.resources
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.Form3.resources
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.MDIMainfrom.resources
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.Properties.Resources.resources
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.csproj.GenerateResource.cache
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.exe.licenses
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.csproj.CoreCompileInputs.cache
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.csproj.CopyComplete
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.exe
+E:\thay khuong chuong trinh QL\QLQuanNuoc\QLQuanNuoc\QLQCAFE\obj\Debug\QLQCAFE.pdb

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLQCOFE5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="IDBAN" />
+    </Key>
+    <Property Name="IDBAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TENBAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TRANGTHAIBAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DANHMUC">
+    <Key>
+      <PropertyRef Name="IDDANHMUC" />
+    </Key>
+    <Property Name="IDDANHMUC" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TENDANHMUC" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="IDHOADON" />
+    </Key>
+    <Property Name="IDHOADON" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IDBAN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="THOIGIANTOI" Type="date" />
+    <Property Name="THOIGIANDI" Type="date" />
+  </EntityType>
+  <EntityType Name="MONAN">
+    <Key>
+      <PropertyRef Name="IDMON" />
+    </Key>
+    <Property Name="IDMON" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TENMON" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GIATIEN" Type="money" />
+    <Property Name="ANH" Type="image" />
+  </EntityType>
+  <Association Name="FK_HOADON_BAN">
+    <End Role="BAN" Type="Self.BAN" Multiplicity="1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAN">
+        <PropertyRef Name="IDBAN" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="IDBAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteBAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TRANGTHAIBAN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteDANHMUC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDDANHMUC" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENDANHMUC" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDHOADON" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteMONAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMON" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="GetBAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetDANHMUC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetMONAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="InserDANHMUC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDDANHMUC" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENDANHMUC" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertBAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TRANGTHAIBAN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDHOADON" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="THOIGIANTOI" Type="date" Mode="In" />
+    <Parameter Name="THOIGIANDI" Type="date" Mode="In" />
+  </Function>
+  <Function Name="InsertMONAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMON" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENMON" Type="nvarchar" Mode="In" />
+    <Parameter Name="GIATIEN" Type="money" Mode="In" />
+    <Parameter Name="ANH" Type="image" Mode="In" />
+  </Function>
+  <Function Name="SearchMONAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMON" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateBAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="TRANGTHAIBAN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateDANHMUC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDDANHMUC" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENDANHMUC" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDHOADON" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDBAN" Type="nvarchar" Mode="In" />
+    <Parameter Name="THOIGIANTOI" Type="date" Mode="In" />
+    <Parameter Name="THOIGIANDI" Type="date" Mode="In" />
+  </Function>
+  <Function Name="UpdateMONAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDMON" Type="nvarchar" Mode="In" />
+    <Parameter Name="TENMON" Type="nvarchar" Mode="In" />
+    <Parameter Name="GIATIEN" Type="money" Mode="In" />
+    <Parameter Name="ANH" Type="image" Mode="In" />
+  </Function>
+  <EntityContainer Name="QLQCOFE5ModelStoreContainer">
+    <EntitySet Name="BAN" EntityType="Self.BAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANHMUC" EntityType="Self.DANHMUC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MONAN" EntityType="Self.MONAN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_HOADON_BAN" Association="Self.FK_HOADON_BAN">
+      <End Role="BAN" EntitySet="BAN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
